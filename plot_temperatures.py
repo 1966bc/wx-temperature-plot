@@ -141,7 +141,7 @@ class TemperaturePlot(plot.PlotCanvas):
 class MainFrame(wx.Frame):
     def __init__(self, data):
         wx.Frame.__init__(self, None,
-                          title="Axis marks",
+                          title=data["title"],
                           size=(600, 400))
         self.SetMinSize((600, 400))
 
