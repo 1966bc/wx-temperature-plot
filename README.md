@@ -28,8 +28,8 @@ standard library.
 ## Usage
 
 Two scripts, separation of concerns. `fetch_temperatures.py` downloads
-and aggregates raw daily data into `temperatures.json`. `sample_two.py`
-reads the JSON and plots it.
+and aggregates raw daily data into `temperatures.json`.
+`plot_temperatures.py` reads the JSON and plots it.
 
     # Show the bundled Rome sample.
     python3 plot_temperatures.py
@@ -74,11 +74,42 @@ vertical 1-sigma error bar.
 
 ## History and credits
 
-| Date       | Author     | Change |
-|------------|------------|--------|
-| 2010-09-22 | Giuseppe Costanzi | Original `sample_two.py` based on Mike Driscoll's wxPython pyplot tutorial. Posted on the `wxpython-users` Google group. |
-| 2020-10-21 | Ecco       | Ported to wxPython Phoenix (wx 4.x), incorporated into the official wxPython wiki. |
-| 2026-05    | Refactor   | snake_case, externalised data, Open-Meteo integration, automatic axis bounds, 1-sigma error bars. |
+The code in this repository has a long lineage that predates the
+repository itself by more than a decade.
+
+In 2008 Mike Rooney posted on the `wxpython-users` Google group a small
+example showing how to bend `wx.lib.plot` into accepting custom axis
+labels — an extension of Mike Driscoll's wxPython pyplot tutorial.
+
+On 14 August 2014, building on that seed, Giuseppe ("beppe") Costanzi
+posted `sample_app.py` to the same group, in a thread titled
+[*wx.lib.plot: override ticks methods to customize labels*](https://groups.google.com/g/wxpython-users/c/zL_tUWs1n7M).
+The demo plotted average Rome temperatures and showed how to override
+`_xticks` / `_yticks` to draw month abbreviations on the X axis and a
+`°C` suffix on the Y axis — the same override pattern still used in
+`plot_temperatures.py` today. Werner replied with Unicode and shebang
+fixes; Nathan McCorkle swapped the entry point from the old
+`pysimpleapp` helper to a plain `wx.App` subclass. Everything ran on
+Debian 6, Python 2.6, wxPython 2.8.
+
+On 21 October 2020 Ecco ported the demo to wxPython Phoenix (wx 4.x),
+renamed it `sample_two.py`, and added it to the official wxPython wiki
+page
+[*How to use Plot - Part 2 (Phoenix)*](https://wiki.wxpython.org/How%20to%20use%20Plot%20-%20Part%202%20%28Phoenix%29),
+where it has lived ever since.
+
+In May 2026 the original author returned to his own twelve-year-old
+code: snake_case throughout, the hardcoded Rome series moved out into a
+JSON file, automatic axis bounds, optional 1-sigma error bars, and a
+companion fetch script that pulls real climatology from the Open-Meteo
+historical weather archive for any city in the world.
+
+| Date       | Author              | File                    | Change |
+|------------|---------------------|-------------------------|--------|
+| 2008       | Mike Rooney         | —                       | Original `wx.lib.plot` custom-label example, extending Mike Driscoll's pyplot tutorial. |
+| 2014-08-14 | Giuseppe Costanzi   | `sample_app.py`         | Posted to `wxpython-users` with the `_xticks` / `_yticks` override pattern still in use here. |
+| 2020-10-21 | Ecco                | `sample_two.py`         | Ported to wxPython Phoenix, added to the official wxPython wiki. |
+| 2026-05    | Giuseppe Costanzi   | `plot_temperatures.py`, `fetch_temperatures.py` | Refactor: snake_case, externalised data, Open-Meteo integration, automatic axis bounds, 1-sigma error bars. |
 
 ## License
 
