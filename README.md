@@ -10,7 +10,13 @@ wiki page
 extended with a separate fetch script that downloads real climate data from
 [Open-Meteo](https://open-meteo.com).
 
-![Average temperature plot for Rome](plot_temperatures.png)
+| Rome | Singapore | Reykjavik |
+|:----:|:---------:|:---------:|
+| ![Rome](screenshots/rome.png) | ![Singapore](screenshots/singapore.png) | ![Reykjavik](screenshots/reykjavik.png) |
+
+Three climates side by side: the Mediterranean curve of Rome, the
+near-flat equatorial line of Singapore, and the narrow oceanic range
+of Reykjavik — all produced by the same script from Open-Meteo data.
 
 ## Requirements
 
