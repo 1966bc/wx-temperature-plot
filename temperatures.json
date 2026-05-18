@@ -1,0 +1,23 @@
+{
+    "title": "Average temperature graph for Rome",
+    "labels": {
+        "x": "Months",
+        "y": "Temperatures"
+    },
+    "months": ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "series": [
+        {
+            "legend": "Lowest",
+            "colour": "blue",
+            "marker": "triangle_down",
+            "values": [3, 3, 6, 8, 13, 17, 19, 19, 16, 12, 8, 4]
+        },
+        {
+            "legend": "Maximum",
+            "colour": "orange",
+            "marker": "triangle",
+            "values": [13, 14, 17, 19, 24, 29, 32, 32, 27, 23, 17, 13]
+        }
+    ]
+}
