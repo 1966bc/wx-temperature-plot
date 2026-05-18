@@ -10,6 +10,8 @@ wiki page
 extended with a separate fetch script that downloads real climate data from
 [Open-Meteo](https://open-meteo.com).
 
+![Average temperature plot for Rome](plot_temperatures.png)
+
 ## Requirements
 
 - Linux with GTK3 (tested on Debian 12)
