@@ -74,12 +74,11 @@ vertical 1-sigma error bar.
 
 ## History and credits
 
-The code in this repository has a long lineage that predates the
-repository itself by more than a decade.
+Once upon a time, in the `wxpython-users` mailing list...
 
-In 2008 Mike Rooney posted on the `wxpython-users` Google group a small
-example showing how to bend `wx.lib.plot` into accepting custom axis
-labels — an extension of Mike Driscoll's wxPython pyplot tutorial.
+In 2008 Mike Rooney posted a small example showing how to bend
+`wx.lib.plot` into accepting custom axis labels — an extension of Mike
+Driscoll's wxPython pyplot tutorial.
 
 On 14 August 2014, building on that seed, Giuseppe ("beppe") Costanzi
 posted `sample_app.py` to the same group, in a thread titled
